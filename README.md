@@ -2,7 +2,7 @@
 
 ## By **Mark McConnell** 👨
 
-### _This is an API to keep track of animals belonging to an Animal Shelter_
+### _This is an API using JWT Authentication to keep track of animals belonging to an Animal Shelter_
 
 ## Technologies Used 🖥️
 
@@ -78,7 +78,22 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 
 * _To interact with the local host website navigate to the AnimalShelter directory and run ```dotnet run```_
 * _Click on  <https://localhost:5001> to interact with Swagger or Open separate session in Postman_
-* If you want to interact with Postman you will have to become an authenticated User
+* If you want to interact with Postman or use Swagger UI, you will have to become an authenticated User
+
+## Swagger UI Walkthrough
+
+* _Click on  <https://localhost:5001> to interact with Swagger_
+* _You will then need to open ```POST /api/Authmanagement/Register``` and click on tryout_
+* _You will need to edit the request body with a valid username, email and password and click Execute_
+* _Next you will need to click on ```POST /api//authmanagement/Login``` to get your token_
+* _If you have logged in correctly a token will be generated in the response body, please make sure to copy it_
+* _Navigate back to the top of page and click on the Authorize Button and paste your token into the box labeled value and click the authorize button_
+* _Once you have been authorized you check it to make sure it is working correctly_
+* _Open the ```GET /api/Animals```, click try it out and then click execute_
+* _It will return a 200 response with a list of the animals that are currently in the database!_
+
+## Postman Walkthrough
+
 * Use the POST option and enter <http://localhost:5001/api/AuthManagement/Register>
 ![Alt text](/AnimalShelter/img/Picture4.png)
 * Select Body – Radio Button - raw – Drop Down - JSON
@@ -90,15 +105,19 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
     “password”: “password”
 }
 ```
+
 ![Alt text](/AnimalShelter/img/Picture5.png)
+
 * Post  <http://localhost:5005/api/AuthManagement/Login>
 * Select Body – Radio Button - raw – Drop Down - JSON
+
 ```
 {
     “email”:  “user@user.com”,
     “password”: “password”
 }
 ```
+
 * If the account was setup successfully you will receive an authorization token
 * After adding [Authorize] to the Controller run a Get request and you will receive a 401 error
 * Run a new get request in separate tab of Postman

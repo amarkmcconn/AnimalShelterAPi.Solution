@@ -37,7 +37,6 @@ namespace AnimalShelter.Controllers
         {
             if(ModelState.IsValid)
             {
-                // We can utilise the model
                 var existingUser = await _userManager.FindByEmailAsync(user.Email);
 
                 if(existingUser != null)

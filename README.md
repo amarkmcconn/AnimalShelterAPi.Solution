@@ -94,9 +94,10 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 
 ## Postman Walkthrough
 
-* Use the POST option and enter <http://localhost:5001/api/AuthManagement/Register>
-![Alt text](/AnimalShelter/img/Picture4.png)
+* Use the POST option and enter the URL <http://localhost:5001/api/AuthManagement/Register>
+
 * Select Body – Radio Button - raw – Drop Down - JSON
+* Create a username, email and password
 
 ```
 {
@@ -106,10 +107,11 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 }
 ```
 
-![Alt text](/AnimalShelter/img/Picture5.png)
+![Alt text](/AnimalShelter/img/Picture4.png)
 
-* Post  <http://localhost:5005/api/AuthManagement/Login>
+* Use the Post option and enter the URL  <http://localhost:5005/api/AuthManagement/Login>
 * Select Body – Radio Button - raw – Drop Down - JSON
+* enter the email and password that created on the previous step
 
 ```
 {
@@ -118,8 +120,9 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 }
 ```
 
+![Alt text](/AnimalShelter/img/Picture5.png)
+
 * If the account was setup successfully you will receive an authorization token
-* After adding [Authorize] to the Controller run a Get request and you will receive a 401 error
 * Run a new get request in separate tab of Postman
 * Go to headers. Show hidden. Key is Authorization. Value is Bearer and use the token that was created when you logged in previously
 ![Alt text](/AnimalShelter/img/Picture8.png)

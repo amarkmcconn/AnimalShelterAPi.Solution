@@ -125,7 +125,9 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 * If the account was setup successfully you will receive an authorization token
 * Run a new get request in separate tab of Postman
 * Go to headers. Show hidden. Key is Authorization. Value is Bearer and use the token that was created when you logged in previously
+
 ![Alt text](/AnimalShelter/img/Picture8.png)
+
 * You will then be able to run your get request as an authenticated user as well as create, edit or delete animals in the shelter!
 
 ## Animal Shelter API Endpoints

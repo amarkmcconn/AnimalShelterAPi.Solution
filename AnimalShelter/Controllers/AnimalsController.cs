@@ -6,11 +6,15 @@ using AnimalShelter.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace AnimalShelter.Controllers
 {
+		[Produces("application/json")]
     [Route("api/[controller]")]
-    [ApiController] 
+    [ApiController]
+		[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AnimalsController : ControllerBase
     {
       private readonly AnimalShelterContext _db;

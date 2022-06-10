@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.OpenApi.Models;
 
 namespace AnimalShelter.Solution
 {
@@ -64,6 +65,26 @@ namespace AnimalShelter.Solution
                 Version = "V1",
                 Title = "Animal Board API",
                 Description = "API for adding animals to a Shelter"
+              });
+              m.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme{
+                In=Microsoft.OpenApi.Models.ParameterLocation.Header,
+                Description  = "Please insert token",
+                Name = "Authorization",
+                Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                BearerFormat="JWT",
+                Scheme="bearer"
+              });
+              m.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement{
+                {
+                    new OpenApiSecurityScheme{
+                        Reference = new OpenApiReference {
+                            Type=ReferenceType.SecurityScheme,
+                            Id="Bearer"
+                        }
+                    },
+                    new string[]{}
+                }
+
               });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);

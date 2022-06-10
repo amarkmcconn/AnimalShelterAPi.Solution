@@ -26,7 +26,7 @@ namespace AnimalShelter.Controllers
 			[HttpGet]
 			[ProducesResponseType(StatusCodes.Status200OK)]
     	[ProducesDefaultResponseType]
-			public async Task<List<Animal>> Get(string name, string neutered, int minimumage, string species, DateTime date)
+			public async Task<List<Animal>> Get(string name, string neutered, int minimumage, string species, string gender, DateTime date)
 			{
 				IQueryable<Animal> query = _db.Animals.AsQueryable();
 				if(name != null)
@@ -44,6 +44,10 @@ namespace AnimalShelter.Controllers
 				if(species != null)
 				{
 					query = query.Where(entry => entry.Species == species);
+				}
+				if(gender != null)
+				{
+					query = query.Where(entry => entry.Gender == gender);
 				}
 				if(date != DateTime.MinValue)
 				{

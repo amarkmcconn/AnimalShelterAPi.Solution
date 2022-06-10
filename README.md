@@ -90,17 +90,15 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
     “password”: “password”
 }
 ```
-![Alt text](/AnimalShelter/img/Picture6.png)
+![Alt text](/AnimalShelter/img/Picture5.png)
 * Post  <http://localhost:5005/api/AuthManagement/Login>
 * Select Body – Radio Button - raw – Drop Down - JSON
-
 ```
 {
     “email”:  “user@user.com”,
     “password”: “password”
 }
 ```
-
 * If the account was setup successfully you will receive an authorization token
 * After adding [Authorize] to the Controller run a Get request and you will receive a 401 error
 * Run a new get request in separate tab of Postman

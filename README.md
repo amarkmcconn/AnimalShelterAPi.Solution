@@ -41,7 +41,7 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 ```js
 {
   "ConnectionStrings": {
-    "DefaultConnection" : "Server=localhost;Port=3306;database=cretaceous_park;uid=root;pwd=epicodus;"
+    "DefaultConnection" : "Server=localhost;Port=3306;database={your-database};uid=root;pwd={your-password};"
   },
   "Logging": {
     "LogLevel": {

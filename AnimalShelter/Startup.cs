@@ -35,9 +35,9 @@ namespace AnimalShelter
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(m =>
             {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo 
+                m.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo 
                 { 
 									Title = "AnimalShelter", 
 									Version = "v1",
@@ -45,7 +45,7 @@ namespace AnimalShelter
                 });
 									var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
 									var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-									c.IncludeXmlComments(xmlPath);
+									m.IncludeXmlComments(xmlPath);
             });
         }
 
@@ -67,9 +67,7 @@ namespace AnimalShelter
 						// app.UseHttpsRedirection();
 
 						app.UseRouting();
-
 						app.UseAuthorization();
-
 						app.UseEndpoints(endpoints =>
 						{
 								endpoints.MapControllers();

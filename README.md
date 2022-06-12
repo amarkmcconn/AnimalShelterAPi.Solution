@@ -1,4 +1,4 @@
-# _<a href="https://fontmeme.com/glitch-fonts/"><img src="https://fontmeme.com/permalink/220610/63719bb5e4a3c7b5d06f6ce5bcfc6962.png" alt="glitch-fonts" border="0"></a>_
+# _<a href="https://fontmeme.com/glitch-fonts/"><img src="https://fontmeme.com/permalink/220610/63719bb5e4a3c7b5d06f6ce5bcfc6962.png" alt="glitch-fonts" border="0"></a>🐶🐱🐹_
 
 ## By **Mark McConnell** 👨
 
@@ -74,13 +74,13 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 * _Run ```dotnet ef migrations add Initial``` from the Animal Shelter Directory_
 * _Once we have verified that the migration looks correct and made any necessary changes, we'll run the following command: ```dotnet ef database update```_
 
-## API Documentation
+## API Documentation 📑
 
 * _To interact with the local host website navigate to the AnimalShelter directory and run ```dotnet run```_
 * _Click on  <https://localhost:5001> to interact with Swagger or Open separate session in Postman_
 * If you want to interact with Postman or use Swagger UI, you will have to become an authenticated User
 
-## Swagger UI Walkthrough
+## Swagger UI Walkthrough 🚶
 
 * _Click on  <https://localhost:5001> to interact with Swagger_
 * _You will then need to open ```POST /api/Authmanagement/Register``` and click on tryout_
@@ -92,7 +92,7 @@ _This is an API to keep track of animals belonging to an Animal Shelter. The API
 * _Open the ```GET /api/Animals```, click try it out and then click execute_
 * _It will return a 200 response with a list of the animals that are currently in the database!_
 
-## Postman Walkthrough
+## Postman Walkthrough 🚶
 
 * Use the POST option and enter the URL <http://localhost:5001/api/AuthManagement/Register>
 
